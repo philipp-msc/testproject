@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Count</title>
+</head>
+<body>
+    <h2>Word Count</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Count</button>
+    </form>
+    {% if word %}
+    <p>Word: {{ word }}</p>
+    <p>Count: {{ count }}</p>
+    {% endif %}
+</body>
+</html>
